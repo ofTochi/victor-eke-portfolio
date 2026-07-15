@@ -23,7 +23,7 @@
                     "on-primary-fixed-variant": "#264191","tertiary-fixed-dim": "#ffb691","outline": "#757682"
             },
             "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","3xl": "24px","full": "9999px"},
-            "spacing": {"margin-mobile": "20px","margin-tablet": "40px","margin-desktop": "80px","unit": "8px","section-gap": "160px","gutter": "32px","container-max": "1440px"},
+            "spacing": {"margin-mobile": "20px","margin-tablet": "40px","margin-desktop": "80px","unit": "8px","section-gap": "80px","gutter": "32px","container-max": "1440px"},
             "fontFamily": {"headline-lg": ["Libre Caslon Text"],"body-md": ["Inter"],"display-lg": ["Libre Caslon Text"],"body-lg": ["Inter"],"headline-md": ["Libre Caslon Text"],"label-sm": ["Inter"],"display-lg-mobile": ["Libre Caslon Text"]},
             "fontSize": {
                     "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
@@ -43,28 +43,43 @@
 </style>
 </head>
 <body class="bg-background text-on-surface font-body-md">
-<header class="bg-surface docked full-width top-0 sticky z-50">
-<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="index.html">VICTOR EKE</a>
-<div class="hidden md:flex gap-10">
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="index.html">Home</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="work.html">Work</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="services.html">Services</a>
-<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="about.html">About</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
-</div>
-</nav>
+<header class="bg-surface top-0 sticky z-50 border-b border-primary/10">
+  <nav class="flex items-center justify-between w-full px-5 md:px-10 py-3 max-w-container-max mx-auto">
+    <a class="flex items-center gap-2.5 flex-shrink-0" href="index.html">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-white text-xs font-bold tracking-wide select-none" aria-hidden="true">VE</span>
+      <span class="font-headline-md text-[15px] font-semibold tracking-tight text-primary leading-none">Victor Eke — About</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a></li>
+      <li><a class="text-[13px] font-semibold text-secondary" href="about.html">About</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a class="hidden md:inline-flex items-center justify-center bg-primary text-white text-[13px] font-semibold px-5 py-2 rounded-xl hover:opacity-90 transition-opacity" href="contact.html">Contact</a>
+      <button class="md:hidden flex items-center justify-center w-9 h-9 text-primary" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+    </div>
+  </nav>
+  <div class="hidden flex-col gap-1 px-5 pb-4 border-t border-primary/10" id="mobile-menu">
+    <a class="py-2 text-[13px] text-on-surface-variant" href="index.html">Home</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="work.html">Work</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="services.html">Services</a>
+    <a class="py-2 text-[13px] font-semibold text-secondary" href="about.html">About</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="contact.html">Contact</a>
+  </div>
 </header>
 <main>
-<section class="px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-container-max mx-auto">
+<section class="px-margin-mobile md:px-margin-desktop py-8 md:py-16 max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <div class="lg:col-span-7">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">The Strategist Behind the Copy</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-3xl">Writing with Editorial Precision.</h1>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-2 block">The Strategist Behind the Copy</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 max-w-3xl">Writing with Editorial Precision.</h1>
 </div>
 <div class="lg:col-span-5 relative group image-container">
 <div class="aspect-[4/5] bg-surface-variant rounded-3xl overflow-hidden shadow-2xl">
-<img class="w-full h-full object-cover image-reveal" alt="Portrait of Victor Eke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJdjhXsBYxESv481FjnP5ZmI1C8TyLLs-H5D0U1HzhQfQBwZ7bFZVxgQFMj4mArstbkzAc8Pek1kMSa5sEB_gQIIVxV8RRhEfJwxpCtJi-iatsZyHtdw_7CEy8QjdTfApbVr5RbDkq3VRdYSXk6Y26oKGKIaWIAN77sC6Jfz-jS8ZBSV6zlJKDQIyt1SMDSHm1sZj-0A_LvGp5jJMDIGhXGjjaWAvLdZw-47QZFgTrp2V9hXDnoZkCxBK3_fJTjwPN2uHVf694_8i6"/>
+<img class="w-full h-full object-cover image-reveal" alt="Portrait of Victor Eke" src="images/victor-eke1.png"/>
 </div>
 </div>
 </div>
@@ -72,31 +87,31 @@
 <section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-4 sticky top-32 h-fit">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Mission of Clarity.</h2>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Mission of Clarity.</h2>
 <p class="font-body-lg text-body-lg text-secondary">In an era of noise, structure is the ultimate luxury. I provide the architectural foundation for brands that speak softly but carry immense weight.</p>
 </div>
-<div class="lg:col-span-7 lg:col-start-6 space-y-24">
+<div class="lg:col-span-7 lg:col-start-6 space-y-12 md:space-y-16">
 <div class="relative pl-12 md:pl-20 border-l border-primary/20">
 <span class="absolute -left-4 top-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
 <span class="material-symbols-outlined text-sm">auto_awesome</span>
 </span>
 <blockquote class="font-headline-md text-headline-md text-on-surface italic leading-relaxed">"I pay attention to how people read, respond, and make decisions."</blockquote>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 <div>
-<h3 class="font-label-sm text-label-sm text-primary uppercase mb-4">Email Marketing</h3>
+<h3 class="font-label-sm text-label-sm text-primary uppercase mb-2">Email Marketing</h3>
 <p class="font-body-md text-body-md text-secondary">Crafting direct-to-inbox experiences that bypass the mental spam filter. My approach is rooted in behavioral psychology — ensuring every sentence leads to an inevitable action.</p>
 </div>
 <div>
-<h3 class="font-label-sm text-label-sm text-primary uppercase mb-4">Website Copywriting</h3>
+<h3 class="font-label-sm text-label-sm text-primary uppercase mb-2">Website Copywriting</h3>
 <p class="font-body-md text-body-md text-secondary">A website is a digital flagship store. I design the narrative flow that guides high-intent visitors through your ecosystem with effortless logic and impeccable tone.</p>
 </div>
 </div>
-<div class="rounded-3xl bg-surface-container p-12 md:p-16 relative overflow-hidden">
+<div class="rounded-3xl bg-surface-container p-6 md:p-10 relative overflow-hidden">
 <div class="relative z-10">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Strategic Depth</h2>
-<p class="font-body-lg text-body-lg text-on-surface mb-8">My work is not just about words; it's about the white space between them — understanding the nuances of your audience's journey and constructing a bridge of trust through impeccable structure.</p>
-<a class="inline-flex items-center gap-4 bg-primary text-white px-10 py-5 rounded-full font-label-sm text-label-sm hover:scale-95 transition-transform duration-300 group" href="contact.html">WORK WITH ME <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Strategic Depth</h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-6">My work is not just about words; it's about the white space between them — understanding the nuances of your audience's journey and constructing a bridge of trust through impeccable structure.</p>
+<a class="inline-flex items-center gap-4 bg-primary text-white px-5 py-2.5 md:px-6 md:py-3 rounded-xl font-label-sm text-label-sm hover:scale-95 transition-transform duration-300 group" href="contact.html">WORK WITH ME <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
 </div>
 <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
 <span class="material-symbols-outlined !text-[200px]" style="font-variation-settings: 'wght' 100;">edit_note</span>
@@ -107,20 +122,20 @@
 </section>
 <section class="bg-surface-container-low py-section-gap">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="mb-16">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">The Methodology</span>
+<div class="mb-8">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-2">The Methodology</span>
 <h2 class="font-display-lg-mobile md:font-headline-lg text-primary">How I Approach the Page</h2>
 </div>
 <div class="space-y-0">
-<div class="group border-t border-primary/20 py-12 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
+<div class="group border-t border-primary/20 py-6 md:py-8 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
 <div class="md:w-1/3"><span class="font-label-sm text-label-sm text-outline mb-2 block">01 / DISCOVERY</span><h3 class="font-headline-md text-headline-md text-primary">Intent-Mapping</h3></div>
 <div class="md:w-1/2"><p class="font-body-md text-body-md text-secondary">Before a single word is written, we map the psychological landscape. Who are we talking to, and what internal objection are we quietly dismantling?</p></div>
 </div>
-<div class="group border-t border-primary/20 py-12 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
+<div class="group border-t border-primary/20 py-6 md:py-8 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
 <div class="md:w-1/3"><span class="font-label-sm text-label-sm text-outline mb-2 block">02 / ARCHITECTURE</span><h3 class="font-headline-md text-headline-md text-primary">Structural Integrity</h3></div>
 <div class="md:w-1/2"><p class="font-body-md text-body-md text-secondary">The copy is built like a premium lookbook — prioritizing flow, visual hierarchy, and the rhythm of the reader's eye across the canvas.</p></div>
 </div>
-<div class="group border-t border-b border-primary/20 py-12 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
+<div class="group border-t border-b border-primary/20 py-6 md:py-8 flex flex-col md:flex-row justify-between gap-8 hover:bg-white/50 transition-colors px-6 -mx-6 rounded-lg">
 <div class="md:w-1/3"><span class="font-label-sm text-label-sm text-outline mb-2 block">03 / EXECUTION</span><h3 class="font-headline-md text-headline-md text-primary">Polished Precision</h3></div>
 <div class="md:w-1/2"><p class="font-body-md text-body-md text-secondary">Finally, the editorial layer. Every sentence is weighed, trimmed, and polished until only the essential remains — pure, persuasive intent.</p></div>
 </div>
@@ -128,27 +143,50 @@
 </div>
 </section>
 <section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto text-center">
-<h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-12">Let's define your narrative.</h2>
-<div class="flex flex-col md:flex-row justify-center gap-8">
-<a class="bg-primary text-white px-12 py-6 rounded-full font-label-sm text-label-sm tracking-widest hover:bg-primary-container transition-all duration-300" href="contact.html">START A PROJECT</a>
-<a class="border border-primary text-primary px-12 py-6 rounded-full font-label-sm text-label-sm tracking-widest hover:bg-primary hover:text-white transition-all duration-300" href="work.html">VIEW PORTFOLIO</a>
+<h2 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Let's define your narrative.</h2>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<a class="bg-primary text-white px-5 py-2.5 md:px-6 md:py-3 rounded-xl font-body-md font-semibold hover:scale-105 transition-transform duration-300 shadow-xl shadow-primary/10" href="contact.html">START A PROJECT</a>
+<a class="border border-primary text-primary px-5 py-2.5 md:px-6 md:py-3 rounded-xl font-body-md font-semibold hover:bg-primary/5 transition-colors duration-300" href="work.html">VIEW PORTFOLIO</a>
 </div>
 </section>
 </main>
 <footer class="bg-surface border-t border-outline-variant">
 <div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter max-w-container-max mx-auto">
 <div class="flex flex-col gap-2">
-<span class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">VICTOR EKE</span>
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">VICTOR EKE</div>
 <p class="font-body-md text-body-md text-secondary">© 2026 VICTOR EKE. All rights reserved.</p>
+<p class="text-secondary font-label-sm text-label-sm opacity-60">Built by FG with ❤️.</p>
 </div>
-<div class="flex gap-8">
-<a class="font-body-md text-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-<a class="font-body-md text-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="mailto:hello@victoreke.com">Email</a>
-<a class="font-body-md text-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</a>
+<div class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="https://linkedin.com" target="_blank" rel="noopener">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+  <span>LinkedIn</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="https://wa.link/lomivq" target="_blank" rel="noopener">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.385 5.39.002 12.012 0c3.208.001 6.225 1.25 8.497 3.524 2.272 2.273 3.52 5.29 3.518 8.497 0 6.627-5.39 12.01-12.013 12.01-2.003-.001-3.971-.502-5.717-1.458L0 24zm6.59-15.01c-.136-.3-.28-.306-.41-.311-.107-.004-.23-.004-.353-.004-.123 0-.323.046-.492.23-.169.184-.645.63-.645 1.538 0 .907.66 1.783.753 1.907.092.124 1.3 1.983 3.148 2.78 1.543.667 2.146.536 2.914.464.767-.072 2.476-.998 2.822-1.968.346-.97.346-1.8.243-1.968-.103-.168-.37-.268-.74-.452-.37-.184-2.18-1.077-2.52-1.198-.34-.121-.588-.184-.834.184-.246.368-.95 1.198-1.166 1.442-.215.243-.43.274-.8.09-.37-.184-1.564-.577-2.98-1.842-1.102-.983-1.847-2.196-2.063-2.564-.216-.368-.023-.567.161-.75.166-.165.37-.43.554-.645.185-.216.246-.369.37-.615.123-.246.062-.46-.03-.645-.093-.184-.834-2.01-.114-2.01z"/></svg>
+  <span>WhatsApp</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="mailto:ekev3636@gmail.com">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 3.92v-8.093l4.623 4.173zm.88 1.071l4.497 4.06c.264.24.623.36.98.36s.716-.12.98-.36l4.498-4.06 4.792 4.071h-20.539l4.792-4.071zm10.158-1.071l4.339-3.921v8.095l-4.339-4.174zm-9.661-1.929l-6.84-.002 7.781 6.945.039.035.039-.035 7.781-6.943-6.84.002-1.96 1.834-1.96-1.836z"/></svg>
+  <span>Email</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="#top">
+  <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+  <span>Back to Top</span>
+</a>
 </div>
 </div>
 </footer>
 <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

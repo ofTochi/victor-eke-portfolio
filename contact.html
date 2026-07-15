@@ -23,7 +23,7 @@
                     "on-primary-fixed-variant": "#264191","tertiary-fixed-dim": "#ffb691","outline": "#757682"
             },
             "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","3xl": "24px","full": "9999px"},
-            "spacing": {"margin-mobile": "20px","margin-tablet": "40px","margin-desktop": "80px","unit": "8px","section-gap": "160px","gutter": "32px","container-max": "1440px"},
+            "spacing": {"margin-mobile": "20px","margin-tablet": "40px","margin-desktop": "80px","unit": "8px","section-gap": "80px","gutter": "32px","container-max": "1440px"},
             "fontFamily": {"headline-lg": ["Libre Caslon Text"],"body-md": ["Inter"],"display-lg": ["Libre Caslon Text"],"body-lg": ["Inter"],"headline-md": ["Libre Caslon Text"],"label-sm": ["Inter"],"display-lg-mobile": ["Libre Caslon Text"]},
             "fontSize": {
                     "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
@@ -43,43 +43,58 @@
 </style>
 </head>
 <body class="font-body-md text-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
-<nav class="bg-surface docked full-width top-0 sticky z-50">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary" href="index.html">VICTOR EKE</a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="index.html">Home</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="work.html">Work</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="services.html">Services</a>
-<a class="font-label-sm text-label-sm text-secondary hover:text-primary transition-colors duration-300" href="about.html">About</a>
-<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="contact.html">Contact</a>
-</div>
-</div>
-</nav>
+<header class="bg-surface top-0 sticky z-50 border-b border-primary/10">
+  <nav class="flex items-center justify-between w-full px-5 md:px-10 py-3 max-w-container-max mx-auto">
+    <a class="flex items-center gap-2.5 flex-shrink-0" href="index.html">
+      <span class="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-white text-xs font-bold tracking-wide select-none" aria-hidden="true">VE</span>
+      <span class="font-headline-md text-[15px] font-semibold tracking-tight text-primary leading-none">Victor Eke — Contact</span>
+    </a>
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a></li>
+      <li><a class="text-[13px] text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a class="hidden md:inline-flex items-center justify-center bg-primary text-white text-[13px] font-semibold px-5 py-2 rounded-xl hover:opacity-90 transition-opacity" href="contact.html">Contact</a>
+      <button class="md:hidden flex items-center justify-center w-9 h-9 text-primary" id="menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+    </div>
+  </nav>
+  <div class="hidden flex-col gap-1 px-5 pb-4 border-t border-primary/10" id="mobile-menu">
+    <a class="py-2 text-[13px] text-on-surface-variant" href="index.html">Home</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="work.html">Work</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="services.html">Services</a>
+    <a class="py-2 text-[13px] text-on-surface-variant" href="about.html">About</a>
+    <a class="py-2 text-[13px] font-semibold text-secondary" href="contact.html">Contact</a>
+  </div>
+</header>
 <main class="min-h-screen">
-<section class="pt-20 pb-12 md:pt-32 md:pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<section class="pt-12 pb-8 md:pt-16 md:pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="max-w-4xl">
-<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Availability: Open for Projects</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">Get In Touch</h1>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.2em] mb-2 block">Availability: Open for Projects</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">Get In Touch</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Whether it's copywriting, content writing, or email marketing, send the details below. I help brands translate complex value into simple, persuasive narratives.</p>
 </div>
 </section>
 <section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-<div class="lg:col-span-7 bg-surface-container-low rounded-3xl p-8 md:p-12">
-<form class="space-y-8" onsubmit="event.preventDefault(); alert('Thanks! This form isn\'t wired to a backend yet — connect it to Formspree, Resend, or a serverless function to receive real messages.');">
+<div class="lg:col-span-7 bg-surface-container-low rounded-3xl p-6 md:p-8">
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Thanks! This form isn\'t wired to a backend yet — connect it to Formspree, Resend, or a serverless function to receive real messages.');">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-secondary" for="name">FULL NAME</label>
-<input class="w-full bg-white border border-outline-variant rounded-xl px-4 py-4 text-on-surface focus:outline-none input-focus-effect transition-all duration-300" id="name" name="name" placeholder="John Doe" required type="text"/>
+<input class="w-full bg-white border border-outline-variant rounded-xl px-4 py-3 text-on-surface focus:outline-none input-focus-effect transition-all duration-300" id="name" name="name" placeholder="John Doe" required type="text"/>
 </div>
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-secondary" for="email">EMAIL ADDRESS</label>
-<input class="w-full bg-white border border-outline-variant rounded-xl px-4 py-4 text-on-surface focus:outline-none input-focus-effect transition-all duration-300" id="email" name="email" placeholder="john@example.com" required type="email"/>
+<input class="w-full bg-white border border-outline-variant rounded-xl px-4 py-3 text-on-surface focus:outline-none input-focus-effect transition-all duration-300" id="email" name="email" placeholder="john@example.com" required type="email"/>
 </div>
 </div>
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-secondary" for="service">INQUIRY TYPE</label>
-<select class="w-full bg-white border border-outline-variant rounded-xl px-4 py-4 text-on-surface focus:outline-none input-focus-effect transition-all duration-300 appearance-none" id="service" name="service">
+<select class="w-full bg-white border border-outline-variant rounded-xl px-4 py-3 text-on-surface focus:outline-none input-focus-effect transition-all duration-300 appearance-none" id="service" name="service">
 <option>Copywriting</option>
 <option>Content Strategy</option>
 <option>Email Marketing</option>
@@ -88,34 +103,34 @@
 </div>
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-secondary" for="message">YOUR MESSAGE</label>
-<textarea class="w-full bg-white border border-outline-variant rounded-xl px-4 py-4 text-on-surface focus:outline-none input-focus-effect transition-all duration-300 resize-none" id="message" name="message" placeholder="Tell me about your project, goals, and timeline..." required rows="6"></textarea>
+<textarea class="w-full bg-white border border-outline-variant rounded-xl px-4 py-3 text-on-surface focus:outline-none input-focus-effect transition-all duration-300 resize-none" id="message" name="message" placeholder="Tell me about your project, goals, and timeline..." required rows="6"></textarea>
 </div>
-<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-5 rounded-3xl font-body-md font-semibold hover:bg-primary-container hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+<button class="w-full md:w-auto bg-primary text-on-primary px-5 py-2.5 md:px-6 md:py-3 rounded-xl font-body-md font-semibold hover:bg-primary-container hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
 Send Message <span class="material-symbols-outlined text-base">arrow_forward</span>
 </button>
 </form>
 </div>
 <div class="lg:col-span-5 space-y-gutter">
-<div class="bg-primary text-on-primary rounded-3xl p-8 md:p-12 relative overflow-hidden group">
+<div class="bg-primary text-on-primary rounded-3xl p-6 md:p-8 relative overflow-hidden group">
 <div class="relative z-10">
 <h3 class="font-headline-md text-headline-md mb-6">Direct Channels</h3>
 <div class="space-y-6">
-<a class="flex items-center gap-4 group/link" href="mailto:hello@victoreke.com">
+<a class="flex items-center gap-4 group/link" href="mailto:ekev3636@gmail.com">
 <div class="w-12 h-12 rounded-full bg-on-primary/10 flex items-center justify-center group-hover/link:bg-on-primary/20 transition-colors">
 <span class="material-symbols-outlined text-on-primary">mail</span>
 </div>
 <div>
 <p class="font-label-sm text-label-sm text-on-primary/60 uppercase tracking-wider">Email</p>
-<p class="font-body-lg text-body-lg">hello@victoreke.com</p>
+<p class="font-body-lg text-body-lg">ekev3636@gmail.com</p>
 </div>
 </a>
-<a class="flex items-center gap-4 group/link" href="https://wa.me/yourlink" target="_blank" rel="noopener">
+<a class="flex items-center gap-4 group/link" href="https://wa.link/lomivq" target="_blank" rel="noopener">
 <div class="w-12 h-12 rounded-full bg-on-primary/10 flex items-center justify-center group-hover/link:bg-on-primary/20 transition-colors">
 <span class="material-symbols-outlined text-on-primary">chat_bubble</span>
 </div>
 <div>
 <p class="font-label-sm text-label-sm text-on-primary/60 uppercase tracking-wider">WhatsApp</p>
-<p class="font-body-lg text-body-lg">+234 Direct Message</p>
+<p class="font-body-lg text-body-lg">Direct WhatsApp Message</p>
 </div>
 </a>
 </div>
@@ -123,9 +138,9 @@ Send Message <span class="material-symbols-outlined text-base">arrow_forward</sp
 <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-on-primary/5 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
 </div>
 <div class="aspect-[4/3] rounded-3xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-sm border border-outline-variant/30">
-<img class="w-full h-full object-cover" alt="Minimalist home office desk with fountain pen and notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFu7IUaNyNlwxRhKrxaEXCTOxMnahrbm-5EGHm6mde2S4Bt86Lk3Y5ko_xmuHUeaXnM6df06jBMtGrXk2HjY9SpeGbR_DX6WxgmR0olxESk_1UHJeHp9l_-RW6hK_zb9qBrlxblNHlqFyWbTiLxXi9dKMoyNH_tyi-F9jKg808CMXAJDDopsBykg0e9jyIDW242oKmA5mJHBod-JiW7xRXdadUXzAoEoONrhx357wN8oxupgWqyT1THWuQSawcjvbPaWhkRmdOx09-"/>
+<img class="w-full h-full object-cover" alt="Portrait of Victor Eke" src="images/victor-eke1.png"/>
 </div>
-<div class="p-8 border border-outline-variant rounded-3xl flex justify-between items-center">
+<div class="p-6 border border-outline-variant rounded-3xl flex justify-between items-center">
 <div>
 <p class="font-label-sm text-label-sm text-secondary">LOCAL TIME</p>
 <p class="font-headline-md text-headline-md text-primary" id="local-time">00:00 AM</p>
@@ -138,32 +153,54 @@ Send Message <span class="material-symbols-outlined text-base">arrow_forward</sp
 </div>
 </div>
 </section>
-<section class="bg-surface-container py-24 px-margin-mobile md:px-margin-desktop text-center">
+<section class="bg-surface-container py-12 md:py-16 px-margin-mobile md:px-margin-desktop text-center">
 <div class="max-w-2xl mx-auto">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Stay Informed</h2>
-<p class="font-body-md text-on-surface-variant mb-8">Join my inner circle for bi-weekly insights on persuasion, content strategy, and digital growth.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Stay Informed</h2>
+<p class="font-body-md text-on-surface-variant mb-6">Join my inner circle for bi-weekly insights on persuasion, content strategy, and digital growth.</p>
 <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thanks for subscribing! (Hook this up to a real email service.)');">
-<input class="flex-1 bg-surface-bright border border-outline-variant rounded-full px-6 py-4 focus:outline-none input-focus-effect" placeholder="Your best email" required type="email"/>
-<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-semibold hover:bg-primary-container transition-all" type="submit">Subscribe</button>
+<input class="flex-1 bg-surface-bright border border-outline-variant rounded-xl px-4 py-3 focus:outline-none input-focus-effect placeholder:text-on-surface-variant/50" aria-label="Email address for newsletter" placeholder="Your best email" required type="email"/>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-xl font-semibold hover:bg-primary-container transition-all" type="submit">Subscribe</button>
 </form>
 </div>
 </section>
 </main>
 <footer class="bg-surface border-t border-outline-variant">
 <div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter max-w-container-max mx-auto">
-<div class="flex flex-col items-center md:items-start gap-2">
-<span class="font-headline-md text-headline-md text-primary">VICTOR EKE</span>
-<p class="font-body-md text-secondary opacity-80">© 2026 VICTOR EKE. All rights reserved.</p>
+<div class="flex flex-col gap-2">
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">VICTOR EKE</div>
+<p class="font-body-md text-body-md text-secondary">© 2026 VICTOR EKE. All rights reserved.</p>
+<p class="text-secondary font-label-sm text-label-sm opacity-60">Built by FG with ❤️.</p>
 </div>
-<div class="flex gap-8">
-<a class="font-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-<a class="font-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="https://wa.me/yourlink" target="_blank" rel="noopener">WhatsApp</a>
-<a class="font-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="mailto:hello@victoreke.com">Email</a>
-<a class="font-body-md text-secondary hover:text-primary underline decoration-1 underline-offset-4 transition-all" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to Top</a>
+<div class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="https://linkedin.com" target="_blank" rel="noopener">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+  <span>LinkedIn</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="https://wa.link/lomivq" target="_blank" rel="noopener">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.385 5.39.002 12.012 0c3.208.001 6.225 1.25 8.497 3.524 2.272 2.273 3.52 5.29 3.518 8.497 0 6.627-5.39 12.01-12.013 12.01-2.003-.001-3.971-.502-5.717-1.458L0 24zm6.59-15.01c-.136-.3-.28-.306-.41-.311-.107-.004-.23-.004-.353-.004-.123 0-.323.046-.492.23-.169.184-.645.63-.645 1.538 0 .907.66 1.783.753 1.907.092.124 1.3 1.983 3.148 2.78 1.543.667 2.146.536 2.914.464.767-.072 2.476-.998 2.822-1.968.346-.97.346-1.8.243-1.968-.103-.168-.37-.268-.74-.452-.37-.184-2.18-1.077-2.52-1.198-.34-.121-.588-.184-.834.184-.246.368-.95 1.198-1.166 1.442-.215.243-.43.274-.8.09-.37-.184-1.564-.577-2.98-1.842-1.102-.983-1.847-2.196-2.063-2.564-.216-.368-.023-.567.161-.75.166-.165.37-.43.554-.645.185-.216.246-.369.37-.615.123-.246.062-.46-.03-.645-.093-.184-.834-2.01-.114-2.01z"/></svg>
+  <span>WhatsApp</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="mailto:ekev3636@gmail.com">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 3.92v-8.093l4.623 4.173zm.88 1.071l4.497 4.06c.264.24.623.36.98.36s.716-.12.98-.36l4.498-4.06 4.792 4.071h-20.539l4.792-4.071zm10.158-1.071l4.339-3.921v8.095l-4.339-4.174zm-9.661-1.929l-6.84-.002 7.781 6.945.039.035.039-.035 7.781-6.943-6.84.002-1.96 1.834-1.96-1.836z"/></svg>
+  <span>Email</span>
+</a>
+<a class="flex items-center gap-2 text-secondary hover:text-primary transition-all opacity-85 hover:opacity-100"
+  href="#top">
+  <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+  <span>Back to Top</span>
+</a>
 </div>
 </div>
 </footer>
 <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
         function updateTime() {
             const now = new Date();
             const options = { hour: '2-digit', minute: '2-digit', hour12: true };
