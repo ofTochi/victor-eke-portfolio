@@ -258,76 +258,103 @@
         <a class="inline-flex items-center gap-1.5 text-[13px] text-primary font-semibold border border-primary/30 px-5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"
           href="work.html">See all work <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
       </div>
-    </section>
-
-    <!-- Testimonials Carousel -->
+    </section>    <!-- Testimonials Carousel -->
     <section class="py-12 md:py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="testimonials">
       <div class="text-center mb-8">
         <span class="text-[11px] uppercase tracking-widest text-secondary font-semibold block mb-2">What People Say</span>
         <h2 class="text-[28px] md:text-[34px] font-headline-lg text-primary leading-tight">Client Reviews &amp; Recommendations</h2>
       </div>
-      <div class="relative max-w-3xl mx-auto" id="testimonials-container">
+      <div class="relative max-w-3xl mx-auto px-4 md:px-12" id="testimonials-container">
+        <!-- Next/Prev Buttons (desktop status: absolute sides) -->
+        <button id="prev-testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-outline-variant/60 bg-surface flex items-center justify-center text-primary/70 hover:text-primary hover:border-primary hover:scale-105 transition-all shadow-sm z-10 hidden md:flex" aria-label="Previous testimonial">
+          <span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span>
+        </button>
+        <button id="next-testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-outline-variant/60 bg-surface flex items-center justify-center text-primary/70 hover:text-primary hover:border-primary hover:scale-105 transition-all shadow-sm z-10 hidden md:flex" aria-label="Next testimonial">
+          <span class="material-symbols-outlined text-[20px]">arrow_forward_ios</span>
+        </button>
+
         <div class="overflow-hidden rounded-3xl border border-outline-variant/40 shadow-sm bg-surface">
-          <!-- Slide 1 -->
-          <div class="testimonial-slide" id="slide-0">
-            <div class="p-6 md:p-8">
-              <div class="flex items-start gap-4 mb-5 pb-5 border-b border-outline-variant/30">
-                <img src="images/recommendations1.jpeg" alt="Evelyn Mercy" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
-                <div>
-                  <p class="font-semibold text-[16px] text-on-surface leading-tight">Evelyn Mercy <span class="text-outline font-normal">· 1st</span></p>
-                  <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Direct Response Copywriter | Content Strategist | Social Media Manager</p>
-                  <p class="text-[12px] text-primary/70 mt-1 italic">March 29, 2026 · Evelyn worked with Victor on the same team</p>
+          <!-- Slide track with transition -->
+          <div class="flex transition-transform duration-500 ease-out" id="testimonial-track">
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 testimonial-slide p-6 md:p-8 select-none" data-idx="0">
+              <div class="flex items-start justify-between gap-4 mb-5 pb-5 border-b border-outline-variant/30">
+                <div class="flex items-start gap-4">
+                  <img src="images/recommendations1.jpeg" alt="Evelyn Mercy" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
+                  <div>
+                    <p class="font-semibold text-[16px] text-on-surface leading-tight">Evelyn Mercy <span class="text-outline font-normal">· 1st</span></p>
+                    <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Direct Response Copywriter | Content Strategist | Social Media Manager</p>
+                    <p class="text-[12px] text-primary/70 mt-1 italic">March 29, 2026 · Evelyn worked with Victor on the same team</p>
+                  </div>
                 </div>
+                <!-- LinkedIn top right button -->
+                <a href="#" class="inline-flex items-center gap-1 bg-[#0077b5]/10 text-[#0077b5] px-3.5 py-1.5 rounded-xl text-[12px] font-semibold hover:bg-[#0077b5]/20 transition-colors shrink-0">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Profile
+                </a>
               </div>
               <p class="text-[15px] text-on-surface leading-relaxed mb-3">If you're looking for a copywriter who truly understands how to turn words into results, Victor is someone I highly recommend.</p>
               <p class="text-[15px] text-on-surface leading-relaxed">Victor doesn't just "write content." He takes the time to understand the audience, the message, and the goal behind every piece. Then he translates that into clear, engaging, and purposeful copy that actually connects.</p>
             </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="testimonial-slide hidden" id="slide-1">
-            <div class="p-6 md:p-8">
-              <div class="flex items-start gap-4 mb-5 pb-5 border-b border-outline-variant/30">
-                <img src="images/recommendations2.jpeg" alt="Vivian Uche" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
-                <div>
-                  <p class="font-semibold text-[16px] text-on-surface leading-tight">Vivian Uche <span class="text-outline font-normal">· 1st</span></p>
-                  <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Email &amp; Sales Copywriter | Conversion Copywriter | Customer Psychology</p>
-                  <p class="text-[12px] text-primary/70 mt-1 italic">March 28, 2026 · Vivian worked with Victor on the same team</p>
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 testimonial-slide p-6 md:p-8 select-none" data-idx="1">
+              <div class="flex items-start justify-between gap-4 mb-5 pb-5 border-b border-outline-variant/30">
+                <div class="flex items-start gap-4">
+                  <img src="images/recommendations2.jpeg" alt="Vivian Uche" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
+                  <div>
+                    <p class="font-semibold text-[16px] text-on-surface leading-tight">Vivian Uche <span class="text-outline font-normal">· 1st</span></p>
+                    <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Email &amp; Sales Copywriter | Conversion Copywriter | Customer Psychology</p>
+                    <p class="text-[12px] text-primary/70 mt-1 italic">March 28, 2026 · Vivian worked with Victor on the same team</p>
+                  </div>
                 </div>
+                <a href="#" class="inline-flex items-center gap-1 bg-[#0077b5]/10 text-[#0077b5] px-3.5 py-1.5 rounded-xl text-[12px] font-semibold hover:bg-[#0077b5]/20 transition-colors shrink-0">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Profile
+                </a>
               </div>
               <p class="text-[15px] text-on-surface leading-relaxed">Victor is a results-driven copywriter who understands how to turn ideas into work that gets results. He takes ownership, thinks strategically, and consistently delivers copy that gets results. He's the kind of person you can trust to get the job done right.</p>
             </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="testimonial-slide hidden" id="slide-2">
-            <div class="p-6 md:p-8">
-              <div class="flex items-start gap-4 mb-5 pb-5 border-b border-outline-variant/30">
-                <img src="images/recommendations3.jpeg" alt="Maryjane Miracle" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
-                <div>
-                  <p class="font-semibold text-[16px] text-on-surface leading-tight">Maryjane Miracle <span class="text-outline font-normal">· 1st</span></p>
-                  <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Direct Response Copywriter | Email Marketing &amp; Landing Page Specialist</p>
-                  <p class="text-[12px] text-primary/70 mt-1 italic">March 25, 2026 · Maryjane worked with Victor on the same team</p>
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0 testimonial-slide p-6 md:p-8 select-none" data-idx="2">
+              <div class="flex items-start justify-between gap-4 mb-5 pb-5 border-b border-outline-variant/30">
+                <div class="flex items-start gap-4">
+                  <img src="images/recommendations3.jpeg" alt="Maryjane Miracle" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
+                  <div>
+                    <p class="font-semibold text-[16px] text-on-surface leading-tight">Maryjane Miracle <span class="text-outline font-normal">· 1st</span></p>
+                    <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Direct Response Copywriter | Email Marketing &amp; Landing Page Specialist</p>
+                    <p class="text-[12px] text-primary/70 mt-1 italic">March 25, 2026 · Maryjane worked with Victor on the same team</p>
+                  </div>
                 </div>
+                <a href="#" class="inline-flex items-center gap-1 bg-[#0077b5]/10 text-[#0077b5] px-3.5 py-1.5 rounded-xl text-[12px] font-semibold hover:bg-[#0077b5]/20 transition-colors shrink-0">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Profile
+                </a>
               </div>
               <p class="text-[15px] text-on-surface leading-relaxed mb-3">I confidently recommend Victor as a highly skilled and results-driven copywriter. He has a sharp understanding of direct-response marketing and knows exactly how to turn ideas into high-converting copy.</p>
               <p class="text-[15px] text-on-surface leading-relaxed">Working with him means working with someone who is committed to excellence and delivering measurable impact. Any brand or business would be fortunate to have him on their team.</p>
             </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="testimonial-slide hidden" id="slide-3">
-            <div class="p-6 md:p-8">
-              <div class="flex items-start gap-4 mb-5 pb-5 border-b border-outline-variant/30">
-                <img src="images/recommendations4.jpeg" alt="Miracle Mark" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
-                <div>
-                  <p class="font-semibold text-[16px] text-on-surface leading-tight">Miracle Mark <span class="text-outline font-normal">· 1st</span></p>
-                  <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Copywriter | Marketing Specialist | Top-Rated on Upwork | ForbesBLK</p>
-                  <p class="text-[12px] text-primary/70 mt-1 italic">February 26, 2026 · Miracle worked with Victor on the same team</p>
+            <!-- Slide 4 -->
+            <div class="w-full flex-shrink-0 testimonial-slide p-6 md:p-8 select-none" data-idx="3">
+              <div class="flex items-start justify-between gap-4 mb-5 pb-5 border-b border-outline-variant/30">
+                <div class="flex items-start gap-4">
+                  <img src="images/recommendations4.jpeg" alt="Miracle Mark" class="w-14 h-14 rounded-full object-cover object-top flex-shrink-0 border-2 border-outline-variant" />
+                  <div>
+                    <p class="font-semibold text-[16px] text-on-surface leading-tight">Miracle Mark <span class="text-outline font-normal">· 1st</span></p>
+                    <p class="text-[13px] text-on-surface-variant leading-snug mt-0.5">Copywriter | Marketing Specialist | Top-Rated on Upwork | ForbesBLK</p>
+                    <p class="text-[12px] text-primary/70 mt-1 italic">February 26, 2026 · Miracle worked with Victor on the same team</p>
+                  </div>
                 </div>
+                <a href="#" class="inline-flex items-center gap-1 bg-[#0077b5]/10 text-[#0077b5] px-3.5 py-1.5 rounded-xl text-[12px] font-semibold hover:bg-[#0077b5]/20 transition-colors shrink-0">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  Profile
+                </a>
               </div>
               <p class="text-[15px] text-on-surface leading-relaxed mb-3">Victor worked with our team at Milmark Institute and proved himself to be hardworking, dependable, and deeply committed to delivering real results. During his time with us, he contributed strong copywriting work that was both strategic and performance-focused.</p>
               <p class="text-[15px] text-on-surface leading-relaxed">He takes ownership, meets deadlines, and consistently brings a results-driven mindset to every project. Any team would be fortunate to have him.</p>
             </div>
           </div>
         </div>
+
         <!-- Dots -->
         <div class="flex justify-center gap-2 mt-5" id="testimonial-dots">
           <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-primary transition-all duration-300" data-idx="0" aria-label="Slide 1"></button>
@@ -337,32 +364,76 @@
         </div>
       </div>
       <style>
-        .testimonial-slide { animation: none; }
-        .testimonial-slide.fade-in { animation: tFadeIn 0.5s ease forwards; }
-        @keyframes tFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .testimonial-slide {
+          transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
       </style>
       <script>
         (function() {
+          const track = document.getElementById('testimonial-track');
           const slides = document.querySelectorAll('.testimonial-slide');
           const dots = document.querySelectorAll('.testimonial-dot');
+          const prevBtn = document.getElementById('prev-testimonial');
+          const nextBtn = document.getElementById('next-testimonial');
           let current = 0;
           let timer;
-          function goTo(idx) {
-            slides[current].classList.add('hidden');
-            slides[current].classList.remove('fade-in');
-            dots[current].classList.remove('bg-primary');
-            dots[current].classList.add('bg-primary/20');
-            current = idx;
-            slides[current].classList.remove('hidden');
-            void slides[current].offsetWidth;
-            slides[current].classList.add('fade-in');
-            dots[current].classList.add('bg-primary');
-            dots[current].classList.remove('bg-primary/20');
+
+          function updateSlides() {
+            const offset = -current * 100;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            slides.forEach((slide, idx) => {
+              if (idx === current) {
+                slide.style.opacity = '1';
+                slide.style.transform = 'scale(1)';
+              } else {
+                slide.style.opacity = '0.35';
+                slide.style.transform = 'scale(0.97)';
+              }
+            });
+
+            dots.forEach((dot, idx) => {
+              if (idx === current) {
+                dot.classList.remove('bg-primary/20');
+                dot.classList.add('bg-primary');
+              } else {
+                dot.classList.add('bg-primary/20');
+                dot.classList.remove('bg-primary');
+              }
+            });
           }
-          function next() { goTo((current + 1) % slides.length); }
-          function startTimer() { timer = setInterval(next, 8000); }
-          function resetTimer() { clearInterval(timer); startTimer(); }
-          dots.forEach(dot => dot.addEventListener('click', () => { goTo(+dot.dataset.idx); resetTimer(); }));
+
+          function showNext() {
+            current = (current + 1) % slides.length;
+            updateSlides();
+          }
+
+          function showPrev() {
+            current = (current - 1 + slides.length) % slides.length;
+            updateSlides();
+          }
+
+          function startTimer() {
+            timer = setInterval(showNext, 8000);
+          }
+
+          function resetTimer() {
+            clearInterval(timer);
+            startTimer();
+          }
+
+          if (prevBtn) prevBtn.addEventListener('click', () => { showPrev(); resetTimer(); });
+          if (nextBtn) nextBtn.addEventListener('click', () => { showNext(); resetTimer(); });
+
+          dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+              current = idx;
+              updateSlides();
+              resetTimer();
+            });
+          });
+
+          updateSlides();
           startTimer();
         })();
       </script>
